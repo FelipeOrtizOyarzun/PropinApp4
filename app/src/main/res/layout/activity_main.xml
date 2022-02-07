@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgTienda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/ic_tienda"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textField"
+        app:layout_constraintBottom_toBottomOf="@+id/textField"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toEndOf="@id/imgTienda"
+        android:hint="@string/ingrese_costo_del_servicio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCostoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/imgServicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:contentDescription="@string/icono_de_servicio"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCalidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCalidad"
+        app:srcCompat="@drawable/ic_baseline_room_service_24" />
+
+    <TextView
+        style="@style/Widget.PropinApp.TextView"
+        android:id="@+id/txtCalidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:text="@string/como_fue_la_calidad_del_servicio"
+        app:layout_constraintStart_toEndOf="@+id/imgServicio"
+        app:layout_constraintTop_toBottomOf="@+id/textField" />
+
+    <RadioGroup
+        android:id="@+id/rgCalidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/txtCalidad"
+        app:layout_constraintTop_toBottomOf="@+id/txtCalidad">
+
+        <RadioButton
+            android:id="@+id/rb20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/excelente_20"
+            style="@style/Widget.PropinApp.CompoundButton.RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rb15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bien_15"
+            style="@style/Widget.PropinApp.CompoundButton.RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rb10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ok_10"
+            style="@style/Widget.PropinApp.CompoundButton.RadioButton" />
+    </RadioGroup>
+
+
+    <ImageView
+        android:id="@+id/imgRedondeo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:contentDescription="@string/icono_de_redondeo"
+        app:layout_constraintBottom_toBottomOf="@+id/swRedondea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/swRedondea"
+        app:srcCompat="@drawable/ic_round" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swRedondea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="14dp"
+        android:checked="true"
+        android:minHeight="@dimen/alto_min_texto"
+        android:text="@string/desea_redondear"
+        style="@style/Widget.PropinApp.CompoundButton.Switch"
+        app:layout_constraintStart_toEndOf="@+id/imgRedondeo"
+        app:layout_constraintTop_toBottomOf="@+id/rgCalidad" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="49dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swRedondea" />
+
+    <TextView
+        android:id="@+id/txtPropina"
+        style="@style/Widget.PropinApp.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

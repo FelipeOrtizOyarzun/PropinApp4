@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.PropinApp.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:minHeight">48dp</item> <!-- en los de abajo se emplea dimens -->
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <style name="Widget.PropinApp.Button" parent="">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">@dimen/alto_min_texto</item>
+        <item name="android:textAppearance">?attr/textAppearanceButton</item>
+    </style>
+
+    <!-- Google dice no ocupar este -->
+    <!--    <style name="Widget.PropinApp.Swich" parent="">-->
+    <!--        <item name="android:gravity">center_vertical</item>-->
+    <!--        <item name="android:minHeight">48dp</item>-->
+    <!--        <item name="android:textAppearance">?attr/textAppearanceBody1</item>-->
+    <!--    </style>-->
+    
+    <style name="Widget.PropinApp.CompoundButton.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:minHeight">@dimen/alto_min_texto</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <style name="Widget.PropinApp.CompoundButton.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+</resources>

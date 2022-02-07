@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PropinApp</string>
+    <string name="ingrese_costo_del_servicio">Ingrese costo del servicio</string>
+    <string name="como_fue_la_calidad_del_servicio">¿Como fue la calidad del servicio?</string>
+    <string name="excelente_20">Excelente 20%</string>
+    <string name="bien_15">Bien 15%</string>
+    <string name="ok_10">Ok 10%</string>
+    <string name="desea_redondear">¿Desea redondear?</string>
+    <string name="calcular">Calcular</string>
+    <string name="propina">Propina: %s</string>
+    <string name="icono_de_redondeo">icono de redondeo</string>
+    <string name="icono_de_servicio">Icono de servicio</string>
+</resources>
